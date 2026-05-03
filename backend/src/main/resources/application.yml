@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:hospitaldb}
     username: ${DB_USER:hospital_user}
-    password: ${DB_PASSWORD}
+    password: ${DB_PASSWORD:hospital_pass}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -37,7 +37,7 @@ spring:
         spring.json.trusted.packages: "com.hospital.kafka"
 
 jwt:
-  secret: ${JWT_SECRET}
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
   expiration: 86400000
 
 springdoc:
